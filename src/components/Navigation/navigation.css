@@ -1,0 +1,35 @@
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.navbar-inverse {
+    background-color: #222;
+    border-color: #080808;
+    border-radius: 0px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    font-size: large;
+}
+
+.navbar-inverse .navbar-brand{
+    margin-bottom: 4px;
+    font-size: x-large;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+    border-bottom: 4px solid #af292b;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+

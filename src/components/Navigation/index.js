@@ -7,6 +7,8 @@ import * as routes from '../../constants/routes';
 import Navbar from "react-bootstrap/es/Navbar";
 import Nav from "react-bootstrap/es/Nav";
 import NavItem from "react-bootstrap/es/NavItem";
+import {LinkContainer} from "react-router-bootstrap";
+import './navigation.css';
 
 const Navigation = () =>
   <AuthUserContext.Consumer>
@@ -14,58 +16,53 @@ const Navigation = () =>
       ? <NavigationAuth />
       : <NavigationNonAuth />
     }
-  </AuthUserContext.Consumer>
+  </AuthUserContext.Consumer>;
 
 const NavigationAuth = () =>
     <Navbar inverse collapseOnSelect>
         <Navbar.Header>
             <Navbar.Brand>
-                <Link to={routes.HOME}>Home</Link>
+                <LinkContainer to={routes.LANDING}>
+                    <span>CyberUnicorns 🦄</span>
+                </LinkContainer>
             </Navbar.Brand>
         </Navbar.Header>
         <Nav>
             <NavItem>
-                <Link to={routes.LANDING}>Landing</Link>
+                <LinkContainer to={routes.HOME}>
+                    <div>Home</div>
+                </LinkContainer>
             </NavItem>
             <NavItem>
-                <Link to={routes.ACCOUNT}>Account</Link>
+                <LinkContainer to={routes.ACCOUNT}>
+                    <div>Account</div>
+                </LinkContainer>
+            </NavItem>
+            <NavItem>
+                Rules
             </NavItem>
         </Nav>
         <Nav pullRight>
-            <NavItem eventKey={1} href="#">
-                Rules
-            </NavItem>
             <NavItem eventKey={2} href="#">
                 <SignOutButton />
             </NavItem>
         </Nav>
     </Navbar>;
-  //<ul>
-  //  <li><Link to={routes.LANDING}>Landing</Link></li>
-  //  <li><Link to={routes.HOME}>Home</Link></li>
-  //  <li><Link to={routes.ACCOUNT}>Account</Link></li>
-  //  <li><SignOutButton /></li>
-  //</ul>
 
 const NavigationNonAuth = () =>
     <Navbar inverse collapseOnSelect>
         <Navbar.Header>
             <Navbar.Brand>
-                <Link to={routes.HOME}>Home</Link>
+                <LinkContainer to={routes.LANDING}>
+                    <span>CyberUnicorns 🦄</span>
+                </LinkContainer>
             </Navbar.Brand>
         </Navbar.Header>
-        <Nav>
-            <NavItem>
-                <Link to={routes.LANDING}>Landing</Link>
-            </NavItem>
-            <NavItem>
-                <Link to={routes.SIGN_IN}>Sign In</Link>
-            </NavItem>
+        <Nav pullRight>
+                <NavItem eventKey={1} componentClass={Link} to={routes.SIGN_IN}>
+                    <div>Sign In</div>
+                </NavItem>
         </Nav>
     </Navbar>;
-  //<ul>
-  //  <li><Link to={routes.LANDING}>Landing</Link></li>
-  //  <li><Link to={routes.SIGN_IN}>Sign In</Link></li>
-  //</ul>
 
 export default Navigation;
