@@ -1,0 +1,346 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body {
+	 margin: 0 auto;
+	 padding: 0;
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url(../../fonts/8143.ttf);
+}
+
+img{
+    height: 10vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+.background {
+    left: 0px;
+	top: 0px;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index:0;
+	background-color: #5c8ecb;
+}
+
+.ContactBgcopy
+{
+	/*animation: ContactBgCopy 0.5s linear 1;*/
+	margin-left: 5%;
+	position: absolute;
+	width: 68vw;
+	border-bottom: 51vh solid #131e42;
+	z-index:2;
+    border-left: 11vw solid transparent;
+    border-right: 12vw solid transparent;
+}
+
+.ContactBgcopy2
+{
+	position: absolute;
+	top: 50vh;
+	margin-left: 5%;
+	margin-bottom: 50%;
+	width: 68vw;
+	border-top: 50vh solid #131e42;
+	z-index:2;
+    border-left: 11vw solid transparent;
+    border-right: 12vw solid transparent;
+}
+
+
+.LogoBg
+{
+    animation: LogoBg 1s linear 1;
+	border: 50vh solid transparent;
+	border-right: 17vw solid #fff;
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+	right: 0px;
+	z-index: 4;
+}
+
+
+.Right {
+    animation: right 1s linear 1;
+    background-color: #ffffff;
+    height: 100vh;
+    position: absolute;
+    width: 35vw;
+    margin-left: 100%;
+    z-index: 17;
+
+}
+
+.Left {
+	animation: left 1s linear 1;
+	background-color: #ffffff;
+	height: 100vh;
+	position: absolute;
+	width: 0vw;
+	margin-left: 0%;
+	z-index: 17;
+}
+
+.LogoBgcopy {
+	animation: LogoBgCopy 1s linear 1;
+	border: 50vh solid transparent;
+	border-left: 17vw solid #fff;
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: 0px;
+	z-index: 4;
+}
+
+
+.menu {
+    bottom: 15vh;
+    width: 80%;
+    height: 10vh;
+    z-index: 6;
+    margin-left: 8%;
+    margin-top: 8%;
+}
+
+.layer {
+    color: #fff;
+    font-size: 2vw;
+    padding-right: 2%;
+    padding-left: 2%;
+    z-index: 5;
+    font-family: MyriadPro;
+    float: left;
+    margin-left: 9.5%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.FITUNIVERSITYTEAM {
+	/*left: 43vw;
+	top: 56vh;
+	position: absolute;*/
+    font-family: MyriadPro;
+	font-size: 1.5vw;
+	word-spacing: 3px;
+	color: #fff;
+	z-index:11;
+}
+
+.Ceb {
+	text-align: center;
+	line-height: 5%;
+	font-family: MyriadPro;
+	font-size: 1.8vw;
+	color: #fff;
+	z-index: 12;
+	margin-left: -4vw;
+	margin-top: -5vw;
+}
+
+.CommandName {
+    font-size: 1.5em;
+}
+
+.Content
+{
+	width: 100%;
+	z-index: 5;
+	left: 2.5vw;
+    top: 40vh;
+	position: absolute;
+}
+
+ .Shape6
+{
+     animation: pulse 1.8s linear infinite;
+	 z-index:13;
+}
+
+.animate {
+    animation: reg 1s linear 1;
+}
+
+ .layer:hover {
+	 background-color: #0f1e3e;
+	 box-shadow: inset 0 0 0 3px #ffffff;
+ }
+
+ @keyframes pulse {
+	 0% {
+		 transform: scale(1);
+	 }
+	 50%{
+		 transform: scale(1.1);
+	 }
+	 100% {
+		 transform: scale(1);
+	 }
+ }
+ @keyframes LogoBg {
+	 0% {
+		margin-right: 35vw;
+	 }
+	 100% {
+		 margin-right: 0;
+	 }
+ }
+ @keyframes LogoBgCopy {
+	 0% {
+		 margin-left: 35vw ;
+	 }
+	 100% {
+		margin-left: 0;
+	 }
+ }
+ @keyframes left {
+	 0% {
+		 width: 35vw;
+	 }
+	 100% {
+		 width: 0;
+	 }
+ }
+ @keyframes right{
+	 0% {
+		 margin-left: 65%;
+	 }
+	 100% {
+		 margin-left: 100%;
+	 }
+ }
+@keyframes reg {
+	0% {
+		margin-top: -27vw;
+	}
+	100% {
+		margin-top: 20vw;
+	}
+}
+@keyframes border {
+	0% {
+		border-bottom: 0px double #131e42;
+	}
+	80% {
+		border-bottom: 0px double #131e42;
+	}
+	100% {
+		border-bottom: 1px double #131e42;
+	}
+}
+@media screen and (max-width: 720px) {
+	.layer{
+		animation: border 1s linear 1;
+		border-bottom: 1px double #131e42;
+		font-size: 2.4vw;
+		margin-left: 32%;
+		float: none;
+		text-align: center;
+		width: 25vw;
+	}
+	.layer:hover{
+		box-shadow: none;
+		background-color: #0f1e3e;
+		border-bottom: 1px double #ffffff;
+	}
+	#login-page{
+		margin-top: 10vw;
+	}
+}
+
+.dark{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	z-index: 150;
+	opacity: 0.5;
+	background-color: black;
+	display: none;
+}
+
+ .login-page {
+	 position: absolute;
+	 z-index: 151;
+	 left: 36vw;
+	 width: 30vw;
+	 padding: 8% 0 0;
+	 margin-top: 4vw;
+	 display: none;
+ }
+ .close{
+	 font-family: "Roboto", sans-serif;
+	 text-transform: uppercase;
+	 outline: 0;
+	 border: 0;
+	 color: #000000;
+	 font-size: 1.1vw;
+	 cursor: pointer;
+ }
+ #close:hover
+ {
+	 color: #4c50ff;
+ }
+ .img_close{
+	 height: 6vh;
+ }
+ #reg{
+	 color: #757373;
+	 font-size: 1.5vw;
+	 text-align: center;
+	 padding-bottom: 1vw;
+ }
+ .form {
+	 position: relative;
+	 z-index: 1;
+	 background: #FFFFFF;
+	 max-width: 360px;
+	 margin: 0 auto 100px;
+	 padding: 4vh;
+	 text-align: center;
+	 box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+ }
+ .form input {
+	 font-family: "Roboto", sans-serif;
+	 outline: 0;
+	 background: #f2f2f2;
+	 width: 100%;
+	 border: 0;
+	 margin: 0 0 1.1vh;
+	 padding: 1vw;
+	 box-sizing: border-box;
+	 font-size: 1vw;
+ }
+ .form button {
+	 font-family: "Roboto", sans-serif;
+	 text-transform: uppercase;
+	 outline: 0;
+	 background: #5c8ecb;
+	 width: 100%;
+	 border: 0;
+	 padding: 1vw;
+	 color: #FFFFFF;
+	 font-size: 1.1vw;
+	/* -webkit-transition: all 0.3 ease;
+	 transition: all 0.3 ease;*/
+	 cursor: pointer;
+ }
+
+ .form button:hover,.form button:active,.form button:focus {
+	 background: #3e53ca;
+ }
+ .form #register-form {
+	 display: none;
+ }
+ .form #login-form{
+	 display: none;
+ }
