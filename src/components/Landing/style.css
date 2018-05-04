@@ -1,0 +1,97 @@
+.person-wrapper{
+    margin-bottom: 2em;
+}
+
+#row-people .person-wrapper{
+    margin-bottom: 2em;
+    background: url('../../images/face.jpg');
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    height: 350px;
+    width: 350px;
+}
+
+.takeSpace{
+    padding-top: 70%;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+.person-wrapper>p {
+    padding: 10px;
+    font-size: large;
+    font-family: "Tw Cen MT Condensed Extra Bold", sans-serif;
+}
+
+.person-wrapper .profile-pic{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.jumbotron{
+    background-color: #9b9b9b;
+    color: #1b0002;
+    width: 100%;
+    text-align: center;
+}
+
+.profile-pic{
+    width: 50%;
+}
+
+h3{
+    margin-bottom: 1em;
+}
+
+#row{
+    width: 70%;
+    margin: auto;
+}
+
+#row-people{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
+#row-people .person-wrapper .profile-pic {
+    width: 70%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#row-people .person-wrapper{
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #404040;
+    color: aliceblue;
+}
+
+#technologies-header{
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+    padding: 10px;
+    color: #401415;
+    font-family: "Book Antiqua", "Tw Cen MT Condensed Extra Bold", sans-serif;
+}
+
+@keyframes rounding {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#react {
+    animation: rounding 5s linear infinite;
+}

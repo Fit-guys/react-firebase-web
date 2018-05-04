@@ -4,8 +4,8 @@ import {
   Route,
 } from 'react-router-dom';
 
-import Navigation from '../Navigation';
-import LandingPage from '../Landing';
+import Navigation from '../Navigation/index';
+import LandingPage from '../Landing/index';
 import SignUpPage from '../SignUp';
 import SignInPage from '../SignIn';
 import PasswordForgetPage from '../PasswordForget';
@@ -20,7 +20,6 @@ const App = () =>
   <Router>
     <div>
       <Navigation />
-
       <Route exact path={routes.LANDING} component={() => <LandingPage />} />
       <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
       <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
