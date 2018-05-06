@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "react-bootstrap/es/Image";
-import headerImage from '../../images/header-image.jpg';
+import headerImage from '../../images/login-back.png';
 import Row from "react-bootstrap/es/Row";
 import Col from "react-bootstrap/es/Col";
 import reactLogo from '../../images/react-logo.png';
@@ -14,13 +14,21 @@ import facebookIco from '../../images/facebook-icon.png';
 import './style.css';
 import Jumbotron from "react-bootstrap/es/Jumbotron";
 import Button from "react-bootstrap/es/Button";
+import Link from "react-router-dom/es/Link";
 
 const LandingPage = () =>
     <div id={"landing"}>
         <div id={"header-image-container"}>
-            <Image src={headerImage} className="header-image" alt={"header image"}  responsive/>
+            <div id={'big-logo-container'}>
+                <Image src={headerImage} className="header-image" alt={"header image"}  responsive/>
+            </div>
             <div id="logo">
                 <Image src={unicornLogo} id={"unicorn-logo"} alt={"unicorn-logo"}  responsive/>
+                <span id={'big-logo-caption'}>
+                    Cyber Unicorns
+                    <br/>
+                    FIT UNIVERSITY TEAM
+                </span>
             </div>
         </div>
         <Jumbotron id={"jumb-project"}>
@@ -38,13 +46,14 @@ const LandingPage = () =>
                 <div className="takeSpace" >
                     <h3>Maks</h3>
                     <span>Project Manager, Technical Researcher, Unity developer</span>
-                </div>
-                <span>
+                    <br/>
+                    <span>
                     ivasenko182@gmail.com
-                    <a href="https://www.linkedin.com/in/maksIvasenko">
+                    <Link target="_blank" to="https://www.linkedin.com/in/maksIvasenko">
                         <Image src={inIco} id={'link-icon'} />
-                    </a>
+                    </Link>
                 </span>
+                </div>
             </Col>
             <Col xs={12} sm={3} className="person-wrapper" id={'anton'}>
                 <div className="takeSpace">
@@ -53,9 +62,9 @@ const LandingPage = () =>
                     <br/>
                     <span>
                         anton.gunko2013@gmail.com
-                        <a href="https://github.com/bageton2">
+                        <Link target="_blank" to="https://github.com/bageton2">
                             <Image src={githubIco} id={'link-icon'} />
-                        </a>
+                        </Link>
                     </span>
                 </div>
             </Col>
@@ -66,9 +75,9 @@ const LandingPage = () =>
                     <br/>
                     <span>
                         frntxacc@gmail.com
-                        <a href="https://github.com/andrew-zhuravlev">
+                        <Link target="_blank" to="https://github.com/andrew-zhuravlev">
                             <Image src={githubIco} id={'link-icon'} />
-                        </a>
+                        </Link>
                     </span>
                 </div>
             </Col>
@@ -78,49 +87,52 @@ const LandingPage = () =>
                 <div className="takeSpace">
                     <h3>Rostislav</h3>
                     <span>Back-end developer, Unity developer</span>
+                    <br/>
+                    <span>
+                        go.go.gg.rostislav@gmail.com
+                        <Link target="_blank" to="https://www.linkedin.com/in/mapinc/">
+                            <Image src={inIco} id={'link-icon'} />
+                        </Link>
+                        <Link target="_blank" to="https://www.facebook.com/Avowedly">
+                            <Image src={facebookIco} id={'link-icon'} />
+                        </Link>
+                        <Link target="_blank" to="https://github.com/MindfulMe">
+                            <Image src={githubIco} id={'link-icon'} />
+                        </Link>
+                    </span>
                 </div>
-                <span>
-                    go.go.gg.rostislav@gmail.com
-                    <a href="https://www.linkedin.com/in/mapinc/">
-                        <Image src={inIco} id={'link-icon'} />
-                    </a>
-                    <a href="https://www.facebook.com/Avowedly">
-                        <Image src={facebookIco} id={'link-icon'} />
-                    </a>
-                    <a href="https://github.com/MindfulMe">
-                        <Image src={githubIco} id={'link-icon'} />
-                    </a>
-                </span>
             </Col>
             <Col xs={12} sm={3} className="person-wrapper" id={'alexandr'}>
                 <div className="takeSpace">
                     <h3>Alexandr</h3>
                     <span>Full-stack developer, UX/UI web designer</span>
+                    <br/>
+                    <span>
+                        sasha732sasha000@gmail.com
+                        <Link target="_blank" to="https://www.linkedin.com/in/alexandr-dobrovolsky-340886154/">
+                            <Image src={inIco} id={'link-icon'} />
+                        </Link>
+                        <Link target="_blank" to="https://www.facebook.com/sasha.dobrovolskiy.52">
+                            <Image src={facebookIco} id={'link-icon'} />
+                        </Link>
+                        <Link target="_blank" to="https://github.com/AlexandrDobrovolskiy">
+                            <Image src={githubIco} id={'link-icon'} />
+                        </Link>
+                    </span>
                 </div>
-                <span style={{marginLeft: '-10px'}}>
-                    sasha732sasha000@gmail.com
-                    <a href="https://www.linkedin.com/in/alexandr-dobrovolsky-340886154/">
-                        <Image src={inIco} id={'link-icon'} />
-                    </a>
-                    <a href="https://www.facebook.com/sasha.dobrovolskiy.52">
-                        <Image src={facebookIco} id={'link-icon'} />
-                    </a>
-                    <a href="https://github.com/AlexandrDobrovolskiy">
-                        <Image src={githubIco} id={'link-icon'} />
-                    </a>
-                </span>
             </Col>
             <Col xs={12} sm={3} className="person-wrapper" id={'vlad'}>
                 <div className="takeSpace">
                     <h3>Vlad</h3>
                     <span>Front-end developer, Unity developer</span>
-                </div>
-                <span>
+                    <br/>
+                    <span>
                         gromvlad12@gmail.com
-                        <a href="https://github.com/orgs/Fit-guys/people/VladGrom">
+                        <Link target="_blank" to="https://github.com/orgs/Fit-guys/people/VladGrom">
                             <Image src={githubIco} id={'link-icon'} />
-                        </a>
+                        </Link>
                     </span>
+                </div>
             </Col>
         </Row>
         <h1 id={"technologies-header"}><b>WHAT DO WE USE?</b></h1>

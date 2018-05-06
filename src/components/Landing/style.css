@@ -23,13 +23,22 @@
 
 .header-image{
     width: 100vw;
-    height: 86vh;
+    height: 90vh;
 }
 
 #logo{
     position: absolute;
-    top: 33%;
-    left: 33%;
+    top: 20vh;
+    left: 35vw;
+}
+
+#big-logo-caption {
+    position: absolute;
+    top: 40vh;
+    left: 4vw;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
 }
 
 @keyframes pulse {
@@ -76,17 +85,17 @@
 }
 
 #jumb-project{
-    background-color: #d1d1d1;
-    height: 85vh;
+    background-color: #4b4b4b;
+    height: 90vh;
     color: #1b0002;
 }
 
 #jumb-contact{
     background-color: #dedede;
-    height: 27vh;
+    height: 20vh;
     color: #1b0002;
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding: 0;
 }
 
 .profile-pic{
@@ -99,6 +108,7 @@ h3{
 
 #row{
     width: 80%;
+    height: 65vh;
     margin: auto;
 }
 
@@ -166,6 +176,7 @@ h3{
 }
 
 #rostic {
+    background-image: url('../../images/profilePics/rostic.jpg ');
 }
 
 #maks {

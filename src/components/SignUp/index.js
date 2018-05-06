@@ -6,12 +6,17 @@ import {
 
 import { auth, db } from '../../firebase';
 import * as routes from '../../constants/routes';
+import Button from "react-bootstrap/es/Button";
+import FormGroup from "react-bootstrap/es/FormGroup";
+import FormControl from "react-bootstrap/es/FormControl";
+import Col from "react-bootstrap/es/Col";
+import Row from "react-bootstrap/es/Row";
+import Form from "react-bootstrap/es/Form";
+import Panel from "react-bootstrap/es/Panel";
+import './signup.css';
 
 const SignUpPage = ({ history }) =>
-  <div>
-    <h1>SignUp</h1>
-    <SignUpForm history={history} />
-  </div>;
+    <SignUpForm history={history} />;
 
 const updateByPropertyName = (propertyName, value) => () => ({
   [propertyName]: value,
@@ -80,37 +85,108 @@ class SignUpForm extends Component {
       email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          value={username}
-          onChange={event => this.setState(updateByPropertyName('username', event.target.value))}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          value={email}
-          onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          value={passwordOne}
-          onChange={event => this.setState(updateByPropertyName('passwordOne', event.target.value))}
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          value={passwordTwo}
-          onChange={event => this.setState(updateByPropertyName('passwordTwo', event.target.value))}
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>
+      <div id={'panel-container'}>
+          <Panel id={'form-panel'} bsStyle="primary">
+              <Panel.Heading>
+                  <Panel.Title componentClass="h3">Sign Up</Panel.Title>
+              </Panel.Heading>
+              <Row id={'panel-content-container'}>
+                  <Form onSubmit={this.onSubmit} horizontal>
+                      <FormGroup controlId="formHorizontalEmail">
+                          <Col sm={4} id={'email-caption'}>
+                              Full Name
+                          </Col>
+                          <Col sm={8}>
+                              <FormControl
+                                  value={username}
+                                  onChange={event => this.setState(updateByPropertyName('username', event.target.value))}
+                                  type="text"
+                                  placeholder="Full Name"
+                              />
+                          </Col>
+                      </FormGroup>
 
-        { error && <p>{error.message}</p> }
-      </form>
+                      <FormGroup controlId="formHorizontalPassword">
+                          <Col sm={4} id={'password-caption'}>
+                              Email
+                          </Col>
+                          <Col sm={8}>
+                              <FormControl
+                                  value={email}
+                                  onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
+                                  type="text"
+                                  placeholder="Email Address"
+                              />
+                          </Col>
+                      </FormGroup>
+
+                      <FormGroup controlId="formHorizontalPassword">
+                          <Col sm={4} id={'password-caption'}>
+                              Password
+                          </Col>
+                          <Col sm={8}>
+                              <FormControl
+                                  value={passwordOne}
+                                  onChange={event => this.setState(updateByPropertyName('passwordOne', event.target.value))}
+                                  type="password"
+                                  placeholder="Password"
+                              />
+                          </Col>
+                      </FormGroup>
+
+                      <FormGroup controlId="formHorizontalPassword">
+                          <Col sm={4} id={'password-caption'}>
+                          </Col>
+                          <Col sm={8}>
+                              <FormControl
+                                  value={passwordTwo}
+                                  onChange={event => this.setState(updateByPropertyName('passwordTwo', event.target.value))}
+                                  type="password"
+                                  placeholder="Confirm Password"
+                              />
+                          </Col>
+                      </FormGroup>
+
+                      <FormGroup>
+                          <Button disabled={isInvalid} type="submit" bsStyle="primary" id={'signup-button'}>Sign up</Button>
+                      </FormGroup>
+
+                      { error && <p id={'error-message'}>{error.message}</p> }
+                  </Form>
+              </Row>
+          </Panel>
+          {/*<form onSubmit={this.onSubmit}>
+              <input
+                  value={username}
+                  onChange={event => this.setState(updateByPropertyName('username', event.target.value))}
+                  type="text"
+                  placeholder="Full Name"
+              />
+              <input
+                  value={email}
+                  onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
+                  type="text"
+                  placeholder="Email Address"
+              />
+              <input
+                  value={passwordOne}
+                  onChange={event => this.setState(updateByPropertyName('passwordOne', event.target.value))}
+                  type="password"
+                  placeholder="Password"
+              />
+              <input
+                  value={passwordTwo}
+                  onChange={event => this.setState(updateByPropertyName('passwordTwo', event.target.value))}
+                  type="password"
+                  placeholder="Confirm Password"
+              />
+              <button disabled={isInvalid} type="submit">
+                  Sign Up
+              </button>
+
+              { error && <p>{error.message}</p> }
+          </form>*/}
+      </div>
     );
   }
 }

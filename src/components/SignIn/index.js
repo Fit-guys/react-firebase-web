@@ -102,13 +102,13 @@ class SignInForm extends Component {
               <Row id={'panel-content-container'}>
                   <Form onSubmit={this.onSubmit} horizontal>
                       <div id={'provider-buttons'}>
-                          <Button onClick={this.withGoogle} id={"google"}>
+                          <Button onClick={this.withGoogle} id={"google"} bsStyle={'primary'}>
                               Goolge
                           </Button>
-                          <Button onClick={this.withGoogle} id={'facebook'}>
+                          <Button onClick={this.withGoogle} id={'facebook'} bsStyle={'primary'}>
                               Facebook
                           </Button>
-                          <Button onClick={this.withGoogle} id={'github'}>
+                          <Button onClick={this.withGoogle} id={'github'} bsStyle={'primary'}>
                               Github
                           </Button>
                       </div>
@@ -141,9 +141,7 @@ class SignInForm extends Component {
                       </FormGroup>
 
                       <FormGroup>
-                          <Col smOffset={2} sm={10}>
                               <Button disabled={isInvalid} type="submit" bsStyle="primary">Sign in</Button>
-                          </Col>
                       </FormGroup>
 
                       { error && <p id={'error-message'}>{error.message}</p> }
