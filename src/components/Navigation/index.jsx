@@ -8,6 +8,8 @@ import Nav from "react-bootstrap/es/Nav";
 import NavItem from "react-bootstrap/es/NavItem";
 import {LinkContainer} from "react-router-bootstrap";
 import './navigation.css';
+import Image from "react-bootstrap/es/Image";
+import smalLogo from '../../images/unicornBlue.png';
 
 const Navigation = () =>
   <AuthUserContext.Consumer>
@@ -17,15 +19,19 @@ const Navigation = () =>
     }
   </AuthUserContext.Consumer>;
 
+const NavHeader = () =>
+    <Navbar.Header>
+        <Navbar.Brand id={"nav-brand"}>
+            <Image src={smalLogo} className="logo" alt={"logo"}  responsive/>
+            <LinkContainer to={routes.LANDING}>
+                <span>CyberUnicorns</span>
+            </LinkContainer>
+        </Navbar.Brand>
+    </Navbar.Header>;
+
 const NavigationAuth = () =>
     <Navbar inverse collapseOnSelect>
-        <Navbar.Header>
-            <Navbar.Brand>
-                <LinkContainer to={routes.LANDING}>
-                    <span>CyberUnicorns 🦄</span>
-                </LinkContainer>
-            </Navbar.Brand>
-        </Navbar.Header>
+        <NavHeader />
         <Nav>
             <NavItem>
                 <LinkContainer to={routes.HOME}>
@@ -42,6 +48,21 @@ const NavigationAuth = () =>
             </NavItem>
         </Nav>
         <Nav pullRight>
+            {/*<NavItem>
+                <LinkContainer to={routes.LANDING}>
+                    <div>Project</div>
+                </LinkContainer>
+            </NavItem>
+            <NavItem>
+                <LinkContainer to={routes.LANDING}>
+                    <div>About us</div>
+                </LinkContainer>
+            </NavItem>
+            <NavItem>
+                <LinkContainer to={routes.LANDING}>
+                    <div>Technologies</div>
+                </LinkContainer>
+            </NavItem>*/}
             <NavItem eventKey={2} href="#">
                 <SignOutButton />
             </NavItem>
@@ -50,13 +71,24 @@ const NavigationAuth = () =>
 
 const NavigationNonAuth = () =>
     <Navbar inverse collapseOnSelect>
-        <Navbar.Header>
-            <Navbar.Brand>
+        <NavHeader />
+        <Nav>
+            {/*<NavItem>
                 <LinkContainer to={routes.LANDING}>
-                    <span>CyberUnicorns 🦄</span>
+                    <div>Project</div>
                 </LinkContainer>
-            </Navbar.Brand>
-        </Navbar.Header>
+            </NavItem>
+            <NavItem>
+                <LinkContainer to={routes.LANDING}>
+                    <div>About us</div>
+                </LinkContainer>
+            </NavItem>
+            <NavItem>
+                <LinkContainer to={routes.LANDING}>
+                    <div>Technologies</div>
+                </LinkContainer>
+            </NavItem>*/}
+        </Nav>
         <Nav pullRight>
             <NavItem eventKey={1}>
                 <LinkContainer to={routes.SIGN_IN}>

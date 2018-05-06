@@ -4,7 +4,6 @@
 
 #row-people .person-wrapper{
     margin-bottom: 2em;
-    background: url('../../images/face.jpg');
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     height: 350px;
@@ -13,14 +12,52 @@
 
 .takeSpace{
     padding-top: 70%;
+    width: 330px;
     text-align: left;
+}
+
+.takeSpace>h3{
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
+.header-image{
+    width: 100vw;
+    height: 86vh;
+}
 
-.person-wrapper>p {
+#logo{
+    position: absolute;
+    top: 33%;
+    left: 33%;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#unicorn-logo{
+    -webkit-filter: drop-shadow(1px 1px 0 black)
+    drop-shadow(-1px -1px 0 black);
+    filter: drop-shadow(1px 1px 0 black)
+    drop-shadow(-1px -1px 0 black);
+    animation: pulse 1.8s linear infinite;
+    margin-left: 7%;
+    width: 30%;
+    height: 30%;
+}
+
+.person-wrapper>span {
     padding: 10px;
-    font-size: large;
+    font-size: small;
     font-family: "Tw Cen MT Condensed Extra Bold", sans-serif;
 }
 
@@ -33,10 +70,23 @@
 }
 
 .jumbotron{
-    background-color: #9b9b9b;
-    color: #1b0002;
     width: 100%;
     text-align: center;
+    margin-bottom: 0;
+}
+
+#jumb-project{
+    background-color: #d1d1d1;
+    height: 85vh;
+    color: #1b0002;
+}
+
+#jumb-contact{
+    background-color: #dedede;
+    height: 27vh;
+    color: #1b0002;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .profile-pic{
@@ -48,7 +98,7 @@ h3{
 }
 
 #row{
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -58,7 +108,7 @@ h3{
     flex-direction: row;
     justify-content: center;
     flex-wrap: nowrap;
-    margin: auto;
+    margin: 3vh auto;
 }
 
 #row-people .person-wrapper .profile-pic {
@@ -94,4 +144,44 @@ h3{
 
 #react {
     animation: rounding 5s linear infinite;
+}
+
+#vlad{
+    background-image: url('../../images/profilePics/vlad.jpg');
+}
+
+#andrey{
+    background-image: url('../../images/profilePics/andrey.jpg');
+}
+
+#andrey .takeSpace{
+}
+
+#alexandr{
+    background-image: url('../../images/profilePics/alexandr.jpg');
+}
+
+#anton{
+    background-image: url('../../images/profilePics/anton.jpg');
+}
+
+#rostic {
+}
+
+#maks {
+}
+
+#maks .takeSpace{
+    padding-top: 65%;
+}
+
+#link-icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#get-started{
+    margin-top: 20px;
 }

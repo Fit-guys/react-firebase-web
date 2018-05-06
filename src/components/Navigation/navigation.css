@@ -2,22 +2,35 @@
     position: relative;
     min-height: 50px;
     border: 1px solid transparent;
-    margin: 0px;
+    margin: 0;
+}
+
+.logo{
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    margin-top: -6px;
+}
+
+#nav-brand{
+    display: flex;
+    flex-direction: row;
 }
 
 .navbar-inverse {
     background-color: #222;
     border-color: #080808;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar-inverse .navbar-nav>li>a{
     font-size: large;
 }
 
 .navbar-inverse .navbar-brand{
     margin-bottom: 4px;
     font-size: x-large;
+    cursor: pointer;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
@@ -25,6 +38,7 @@
     text-shadow: 0 -1px 0 rgba(0,0,0,.25);
     border-bottom: 4px solid #af292b;
 }
+
 
 .navbar-brand {
     float: left;

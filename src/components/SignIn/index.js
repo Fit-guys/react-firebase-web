@@ -5,6 +5,18 @@ import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
+import firebase from 'firebase';
+import Button from "react-bootstrap/es/Button";
+
+const provider = new firebase.auth.GoogleAuthProvider();
+
+provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+
+firebase.auth().languageCode = 'en';
+
+provider.setCustomParameters({
+    'login_hint': 'user@example.com'
+});
 
 const SignInPage = ({ history }) =>
   <div>
@@ -12,7 +24,7 @@ const SignInPage = ({ history }) =>
     <SignInForm history={history} />
     <PasswordForgetLink />
     <SignUpLink />
-  </div>
+  </div>;
 
 const updateByPropertyName = (propertyName, value) => () => ({
   [propertyName]: value,
@@ -30,6 +42,19 @@ class SignInForm extends Component {
 
     this.state = { ...INITIAL_STATE };
   }
+
+  withGoogle  = () => {
+      const {
+          history,
+      } = this.props;
+
+      firebase.auth().signInWithPopup(provider).then(() => {
+          this.setState(() => ({...INITIAL_STATE}));
+          history.push(routes.HOME);
+      }).catch(function (error) {
+      });
+
+  };
 
   onSubmit = (event) => {
     const {
@@ -51,7 +76,7 @@ class SignInForm extends Component {
       });
 
     event.preventDefault();
-  }
+  };
 
   render() {
     const {
@@ -65,25 +90,30 @@ class SignInForm extends Component {
       email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          value={email}
-          onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          value={password}
-          onChange={event => this.setState(updateByPropertyName('password', event.target.value))}
-          type="password"
-          placeholder="Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign In
-        </button>
+      <div>
+          <form onSubmit={this.onSubmit}>
+              <input
+                  value={email}
+                  onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
+                  type="text"
+                  placeholder="Email Address"
+              />
+              <input
+                  value={password}
+                  onChange={event => this.setState(updateByPropertyName('password', event.target.value))}
+                  type="password"
+                  placeholder="Password"
+              />
+              <button disabled={isInvalid} type="submit">
+                  Sign In
+              </button>
 
-        { error && <p>{error.message}</p> }
-      </form>
+              { error && <p>{error.message}</p> }
+          </form>
+          <Button onClick={this.withGoogle}>
+              Ggl
+          </Button>
+      </div>
     );
   }
 }
