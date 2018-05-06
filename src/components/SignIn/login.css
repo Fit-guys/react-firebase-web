@@ -1,0 +1,77 @@
+#form-panel{
+    width: 530px;
+    height: 400px;
+}
+
+.form-horizontal{
+    padding: 20px;
+    font-size: large;
+}
+
+.panel-primary {
+    border-radius: 0;
+    border-color: #2f4780;
+}
+
+.panel-heading {
+    border-radius: 0;
+    color: #fff;
+    background-color: #2f4780;
+    border-color: #2f4780;
+}
+
+.btn-primary{
+    border-radius: 0;
+}
+
+#provider-buttons>button{
+    border-radius: 0;
+    border: none;
+    font-family: "Fira Code", sans-serif;
+    width: 6vw;
+    margin: 15px 10px 20px 10px;
+    color: white;
+}
+
+#error-message{
+    color: red;
+}
+
+.form-group{
+    margin: 15px;
+}
+
+#password-caption{
+    margin-top: 5px;
+}
+
+#email-caption{
+    margin-top: 5px;
+}
+
+#provider-buttons #google {
+    background: #df4a32;
+}
+
+#provider-buttons #facebook {
+    background: #49639f;
+}
+
+#provider-buttons #github {
+    background: #00b595;
+}
+
+#panel-container{
+    height: 95vh;
+    padding-top: 20vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(../../images/back.jpg);
+}
+
+#panel-content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
