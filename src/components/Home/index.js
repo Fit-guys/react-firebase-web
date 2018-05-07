@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import AuthUserContext from '../Session/AuthUserContext';
 import withAuthorization from '../Session/withAuthorization';
 import { db } from '../../firebase';
 
@@ -25,8 +26,7 @@ class HomePage extends Component {
       <div>
         <h1>Home</h1>
         <p>The Home Page is accessible by every signed in user.</p>
-
-        { !!users && <UserList users={users} /> }
+          { !!users && <UserList users={users} /> }
       </div>
     );
   }
@@ -34,6 +34,13 @@ class HomePage extends Component {
 
 const UserList = ({ users }) =>
   <div>
+      <AuthUserContext.Consumer>
+          {authUser =>
+              <div>
+                  <h1>Account: {authUser.email}</h1>
+              </div>
+          }
+      </AuthUserContext.Consumer>
     <h2>List of Usernames of Users</h2>
     <p>(Saved on Sign Up in Firebase Database)</p>
 

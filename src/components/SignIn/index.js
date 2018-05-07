@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
-import { SignUpLink } from '../SignUp';
+import { SignUpLink } from '../SignUp/index';
 import { PasswordForgetLink } from '../PasswordForget';
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
@@ -18,8 +18,6 @@ import Row from "react-bootstrap/es/Row";
 const provider = new firebase.auth.GoogleAuthProvider();
 
 provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-
-firebase.auth().languageCode = 'en';
 
 provider.setCustomParameters({
     'login_hint': 'user@example.com'

@@ -14,7 +14,7 @@ const AccountPage = () =>
         <PasswordChangeForm />
       </div>
     }
-  </AuthUserContext.Consumer>
+  </AuthUserContext.Consumer>;
 
 const authCondition = (authUser) => !!authUser;
 
