@@ -48,21 +48,21 @@ const NavigationAuth = () =>
             </NavItem>
         </Nav>
         <Nav pullRight>
-            {/*<NavItem>
-                <LinkContainer to={routes.LANDING}>
+            <NavItem>
+                <LinkContainer to={routes.PROJECT}>
                     <div>Project</div>
                 </LinkContainer>
             </NavItem>
             <NavItem>
-                <LinkContainer to={routes.LANDING}>
+                <LinkContainer to={routes.ABOUT}>
                     <div>About us</div>
                 </LinkContainer>
             </NavItem>
             <NavItem>
-                <LinkContainer to={routes.LANDING}>
+                <LinkContainer to={routes.TECHNOLOGIES}>
                     <div>Technologies</div>
                 </LinkContainer>
-            </NavItem>*/}
+            </NavItem>
             <NavItem eventKey={2} href="#">
                 <SignOutButton />
             </NavItem>
@@ -73,21 +73,21 @@ const NavigationNonAuth = () =>
     <Navbar inverse collapseOnSelect>
         <NavHeader />
         <Nav>
-            {/*<NavItem>
-                <LinkContainer to={routes.LANDING}>
+            <NavItem>
+                <LinkContainer to={routes.PROJECT}>
                     <div>Project</div>
                 </LinkContainer>
             </NavItem>
             <NavItem>
-                <LinkContainer to={routes.LANDING}>
+                <LinkContainer to={routes.ABOUT}>
                     <div>About us</div>
                 </LinkContainer>
             </NavItem>
             <NavItem>
-                <LinkContainer to={routes.LANDING}>
+                <LinkContainer to={routes.TECHNOLOGIES}>
                     <div>Technologies</div>
                 </LinkContainer>
-            </NavItem>*/}
+            </NavItem>
         </Nav>
         <Nav pullRight>
             <NavItem eventKey={1}>

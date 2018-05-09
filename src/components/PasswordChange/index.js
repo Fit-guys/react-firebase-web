@@ -31,7 +31,7 @@ class PasswordChangeForm extends Component {
       });
 
     event.preventDefault();
-  }
+  };
 
   render() {
     const {

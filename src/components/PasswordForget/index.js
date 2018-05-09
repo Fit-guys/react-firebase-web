@@ -82,25 +82,12 @@ class PasswordForgetForm extends Component {
                         <FormGroup>
                             <Button disabled={isInvalid} type="submit" bsStyle="primary" id={'signup-button'}>Reset password</Button>
                         </FormGroup>
+                        { error && <p id={'error-message'}>{error.message}</p> }
 
                         <p>Ready? <Link to={routes.SIGN_IN}>Sign In</Link></p>
-                        { error && <p id={'error-message'}>{error.message}</p> }
                     </Form>
                 </Row>
             </Panel>
-            {/*<form onSubmit={this.onSubmit}>
-        <input
-          value={this.state.email}
-          onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
-          type="text"
-          placeholder="Email Address"
-        />
-        <button disabled={isInvalid} type="submit">
-          Reset My Password
-        </button>
-
-        { error && <p>{error.message}</p> }
-      </form>*/}
         </div>
     );
   }

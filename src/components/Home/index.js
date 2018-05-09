@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import AuthUserContext from '../Session/AuthUserContext';
 import withAuthorization from '../Session/withAuthorization';
 import { db } from '../../firebase';
+import Button from "react-bootstrap/es/Button";
 
 class HomePage extends Component {
   constructor(props) {
@@ -38,6 +39,7 @@ const UserList = ({ users }) =>
           {authUser =>
               <div>
                   <h1>Account: {authUser.email}</h1>
+                  <Button id={'play-button'}>Play</Button>
               </div>
           }
       </AuthUserContext.Consumer>
@@ -45,7 +47,7 @@ const UserList = ({ users }) =>
     <p>(Saved on Sign Up in Firebase Database)</p>
 
     {Object.keys(users).map(key =>
-      <div key={key}>{users[key].username}</div>
+      <div key={key}>{key}</div>
     )}
   </div>;
 

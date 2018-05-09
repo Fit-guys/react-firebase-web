@@ -23,7 +23,7 @@
 
 .header-image{
     width: 100vw;
-    height: 90vh;
+    height: 95vh;
 }
 
 #logo{
@@ -176,10 +176,11 @@ h3{
 }
 
 #rostic {
-    background-image: url('../../images/profilePics/rostic.jpg ');
+    background-image: url('../../images/profilePics/rostic.jpg');
 }
 
 #maks {
+    background-image: url('../../images/profilePics/2 Cropped.jpg');
 }
 
 #maks .takeSpace{
@@ -195,4 +196,45 @@ h3{
 
 #get-started{
     margin-top: 20px;
+}
+
+#down-arrow-left {
+    position: absolute;
+    top: 80vh;
+    left: 5%;
+    width: 125px;
+    height: 125px;
+    animation: arrow 1.4s linear infinite;
+}
+
+#down-arrow-right {
+    animation: arrow 1.4s linear infinite;
+    position: absolute;
+    top: 80vh;
+    right: 5%;
+    width: 125px;
+    height: 125px;
+}
+
+#down-arrow-right{
+    animation: arrow 1.4s linear infinite;
+    position: absolute;
+    top: 80vh;
+    right: 5%;
+    width: 125px;
+    height: 125px;
+}
+
+@keyframes arrow {
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+        top: 84vh;
+        visibility: hidden;
+    }
+    100% {
+        transform: scale(1);
+    }
 }

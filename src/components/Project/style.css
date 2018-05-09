@@ -1,0 +1,240 @@
+.person-wrapper{
+    margin-bottom: 2em;
+}
+
+#row-people .person-wrapper{
+    margin-bottom: 2em;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    height: 350px;
+    width: 350px;
+}
+
+.takeSpace{
+    padding-top: 70%;
+    width: 330px;
+    text-align: left;
+}
+
+.takeSpace>h3{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.header-image{
+    width: 100vw;
+    height: 95vh;
+}
+
+#logo{
+    position: absolute;
+    top: 20vh;
+    left: 35vw;
+}
+
+#big-logo-caption {
+    position: absolute;
+    top: 40vh;
+    left: 4vw;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#unicorn-logo{
+    -webkit-filter: drop-shadow(1px 1px 0 black)
+    drop-shadow(-1px -1px 0 black);
+    filter: drop-shadow(1px 1px 0 black)
+    drop-shadow(-1px -1px 0 black);
+    animation: pulse 1.8s linear infinite;
+    margin-left: 7%;
+    width: 30%;
+    height: 30%;
+}
+
+.person-wrapper>span {
+    padding: 10px;
+    font-size: small;
+    font-family: "Tw Cen MT Condensed Extra Bold", sans-serif;
+}
+
+.person-wrapper .profile-pic{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.jumbotron{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#jumb-project{
+    background-color: #4b4b4b;
+    height: 90vh;
+    color: #1b0002;
+}
+
+#jumb-contact{
+    background-color: #dedede;
+    height: 20vh;
+    color: #1b0002;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.profile-pic{
+    width: 50%;
+}
+
+h3{
+    margin-bottom: 1em;
+}
+
+#row{
+    width: 80%;
+    height: 65vh;
+    margin: auto;
+}
+
+#row-people{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 3vh auto;
+}
+
+#row-people .person-wrapper .profile-pic {
+    width: 70%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#row-people .person-wrapper{
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #404040;
+    color: aliceblue;
+}
+
+#technologies-header{
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+    padding: 10px;
+    color: #401415;
+    font-family: "Book Antiqua", "Tw Cen MT Condensed Extra Bold", sans-serif;
+}
+
+@keyframes rounding {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#react {
+    animation: rounding 5s linear infinite;
+}
+
+#vlad{
+    background-image: url('../../images/profilePics/vlad.jpg');
+}
+
+#andrey{
+    background-image: url('../../images/profilePics/andrey.jpg');
+}
+
+#andrey .takeSpace{
+}
+
+#alexandr{
+    background-image: url('../../images/profilePics/alexandr.jpg');
+}
+
+#anton{
+    background-image: url('../../images/profilePics/anton.jpg');
+}
+
+#rostic {
+    background-image: url('../../images/profilePics/rostic.jpg');
+}
+
+#maks {
+    background-image: url('../../images/profilePics/2 Cropped.jpg');
+}
+
+#maks .takeSpace{
+    padding-top: 65%;
+}
+
+#link-icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#get-started{
+    margin-top: 20px;
+}
+
+#down-arrow-left {
+    position: absolute;
+    top: 80vh;
+    left: 5%;
+    width: 125px;
+    height: 125px;
+    animation: arrow 1.4s linear infinite;
+}
+
+#down-arrow-right {
+    animation: arrow 1.4s linear infinite;
+    position: absolute;
+    top: 80vh;
+    right: 5%;
+    width: 125px;
+    height: 125px;
+}
+
+#down-arrow-right{
+    animation: arrow 1.4s linear infinite;
+    position: absolute;
+    top: 80vh;
+    right: 5%;
+    width: 125px;
+    height: 125px;
+}
+
+@keyframes arrow {
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+        top: 84vh;
+        visibility: hidden;
+    }
+    100% {
+        transform: scale(1);
+    }
+}

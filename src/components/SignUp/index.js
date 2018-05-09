@@ -52,7 +52,7 @@ class SignUpForm extends Component {
       .then(authUser => {
 
         // Create a user in your own accessible Firebase Database too
-        db.doCreateUser(authUser.uid, username, email)
+        db.doCreateUser(authUser.uid, username, email, 'SOSI HUI')
           .then(() => {
             this.setState(() => ({ ...INITIAL_STATE }));
             history.push(routes.HOME);
@@ -155,37 +155,6 @@ class SignUpForm extends Component {
                   </Form>
               </Row>
           </Panel>
-          {/*<form onSubmit={this.onSubmit}>
-              <input
-                  value={username}
-                  onChange={event => this.setState(updateByPropertyName('username', event.target.value))}
-                  type="text"
-                  placeholder="Full Name"
-              />
-              <input
-                  value={email}
-                  onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
-                  type="text"
-                  placeholder="Email Address"
-              />
-              <input
-                  value={passwordOne}
-                  onChange={event => this.setState(updateByPropertyName('passwordOne', event.target.value))}
-                  type="password"
-                  placeholder="Password"
-              />
-              <input
-                  value={passwordTwo}
-                  onChange={event => this.setState(updateByPropertyName('passwordTwo', event.target.value))}
-                  type="password"
-                  placeholder="Confirm Password"
-              />
-              <button disabled={isInvalid} type="submit">
-                  Sign Up
-              </button>
-
-              { error && <p>{error.message}</p> }
-          </form>*/}
       </div>
     );
   }

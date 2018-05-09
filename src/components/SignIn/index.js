@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 import { SignUpLink } from '../SignUp/index';
 import { PasswordForgetLink } from '../PasswordForget';
-import { auth } from '../../firebase';
+import {auth, db} from '../../firebase';
 import * as routes from '../../constants/routes';
 import firebase from 'firebase';
 import Button from "react-bootstrap/es/Button";
@@ -47,12 +47,23 @@ class SignInForm extends Component {
 
   withGoogle  = () => {
       const {
+          username,
+          email,
+      } = this.state;
+
+      const {
           history,
       } = this.props;
 
-      firebase.auth().signInWithPopup(provider).then(() => {
-          this.setState(() => ({...INITIAL_STATE}));
-          history.push(routes.HOME);
+      firebase.auth().signInWithPopup(provider).then((authUser) => {
+          db.doCreateUser(authUser.uid, username, email, '')
+              .then(() => {
+                  this.setState(() => ({ ...INITIAL_STATE }));
+                  history.push(routes.HOME);
+              })
+              .catch(error => {
+                  this.setState(updateByPropertyName('error', error));
+              });
       }).catch(function (error) {
       });
 

@@ -13,14 +13,13 @@ import githubIco from '../../images/githubIco.png';
 import facebookIco from '../../images/facebook-icon.png';
 import './style.css';
 import Jumbotron from "react-bootstrap/es/Jumbotron";
-import Button from "react-bootstrap/es/Button";
 import Link from "react-router-dom/es/Link";
 
 const LandingPage = () =>
     <div id={"landing"}>
         <div id={"header-image-container"}>
             <div id={'big-logo-container'}>
-                <Image src={headerImage} className="header-image" alt={"header image"}  responsive/>
+                <Image src={headerImage} className="header-image" alt={"header image"} responsive/>
             </div>
             <div id="logo">
                 <Image src={unicornLogo} id={"unicorn-logo"} alt={"unicorn-logo"}  responsive/>
@@ -31,19 +30,10 @@ const LandingPage = () =>
                 </span>
             </div>
         </div>
-        <Jumbotron id={"jumb-project"}>
-            <h1>Our project</h1>
-            <p>Our project description....</p>
-            <p>Our project description....</p>
-            <p>Our project description....</p>
-            <p>Our project description....</p>
-            <p>Our project description....</p>
-            <Button bsSize="large" id="getStarted">Get Started</Button>
-        </Jumbotron>
         <h1 id={"technologies-header"}><b>WHO WE ARE?</b></h1>
         <Row className="show-grid text-center" id="row-people">
-            <Col xs={12} sm={3} className="person-wrapper" id={'maks'}>
-                <div className="takeSpace" >
+            <Col xs={12} sm={3} className="person-wrapper" id={'maks'} >
+                <div className="takeSpace">
                     <h3>Maks</h3>
                     <span>Project Manager, Technical Researcher, Unity developer</span>
                     <br/>
