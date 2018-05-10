@@ -92,10 +92,38 @@
 
 #jumb-contact{
     background-color: #dedede;
-    height: 20vh;
+    height: 15vh;
     color: #1b0002;
     margin-bottom: 0;
-    padding: 0;
+}
+
+#grid{
+}
+
+#t-footer{
+    width: 100%;
+    background-color: whitesmoke;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+}
+
+#t-footer>h2{
+    padding-top: 10px;
+}
+
+#t-footer>h3 {
+    margin: 0;
+    height: 7vh;
+}
+
+#t-footer>h3>span{
+    color: darkmagenta;
+}
+
+#t-main-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .profile-pic{
@@ -108,7 +136,7 @@ h3{
 
 #row{
     width: 80%;
-    height: 65vh;
+    height: 70vh;
     margin: auto;
 }
 
@@ -118,7 +146,7 @@ h3{
     flex-direction: row;
     justify-content: center;
     flex-wrap: nowrap;
-    margin: 3vh auto;
+    margin: 1vh auto;
 }
 
 #row-people .person-wrapper .profile-pic {
