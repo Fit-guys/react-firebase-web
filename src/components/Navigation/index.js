@@ -24,7 +24,7 @@ const NavHeader = () =>
         <Navbar.Brand id={"nav-brand"}>
             <Image src={smalLogo} className="logo" alt={"logo"}  responsive/>
             <LinkContainer to={routes.LANDING}>
-                <span>CyberUnicorns</span>
+                <span>Cyber Unicorns</span>
             </LinkContainer>
         </Navbar.Brand>
     </Navbar.Header>;
@@ -35,34 +35,19 @@ const NavigationAuth = () =>
         <Nav>
             <NavItem>
                 <LinkContainer to={routes.HOME}>
-                    <div>Home</div>
+                    <div>Профіль</div>
                 </LinkContainer>
             </NavItem>
             <NavItem>
                 <LinkContainer to={routes.ACCOUNT}>
-                    <div>Account</div>
+                    <div>Налаштування</div>
                 </LinkContainer>
             </NavItem>
             <NavItem>
-                Rules
+                Правила
             </NavItem>
         </Nav>
         <Nav pullRight>
-            <NavItem>
-                <LinkContainer to={routes.PROJECT}>
-                    <div>Project</div>
-                </LinkContainer>
-            </NavItem>
-            <NavItem>
-                <LinkContainer to={routes.ABOUT}>
-                    <div>About us</div>
-                </LinkContainer>
-            </NavItem>
-            <NavItem>
-                <LinkContainer to={routes.TECHNOLOGIES}>
-                    <div>Technologies</div>
-                </LinkContainer>
-            </NavItem>
             <NavItem eventKey={2} href="#">
                 <SignOutButton />
             </NavItem>
@@ -72,27 +57,10 @@ const NavigationAuth = () =>
 const NavigationNonAuth = () =>
     <Navbar inverse collapseOnSelect>
         <NavHeader />
-        <Nav>
-            <NavItem>
-                <LinkContainer to={routes.PROJECT}>
-                    <div>Project</div>
-                </LinkContainer>
-            </NavItem>
-            <NavItem>
-                <LinkContainer to={routes.ABOUT}>
-                    <div>About us</div>
-                </LinkContainer>
-            </NavItem>
-            <NavItem>
-                <LinkContainer to={routes.TECHNOLOGIES}>
-                    <div>Technologies</div>
-                </LinkContainer>
-            </NavItem>
-        </Nav>
         <Nav pullRight>
             <NavItem eventKey={1}>
                 <LinkContainer to={routes.SIGN_IN}>
-                    <span>Sign In</span>
+                    <span>Увійти</span>
                 </LinkContainer>
             </NavItem>
         </Nav>

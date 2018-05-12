@@ -88,48 +88,48 @@ class SignUpForm extends Component {
       <div id={'panel-container'}>
           <Panel id={'form-panel'} bsStyle="primary">
               <Panel.Heading>
-                  <Panel.Title componentClass="h3">Sign Up</Panel.Title>
+                  <Panel.Title componentClass="h3">Реєстрація</Panel.Title>
               </Panel.Heading>
               <Row id={'panel-content-container'}>
                   <Form onSubmit={this.onSubmit} horizontal>
                       <FormGroup controlId="formHorizontalEmail">
                           <Col sm={4} id={'email-caption'}>
-                              Full Name
+                              Ім'я
                           </Col>
                           <Col sm={8}>
                               <FormControl
                                   value={username}
                                   onChange={event => this.setState(updateByPropertyName('username', event.target.value))}
                                   type="text"
-                                  placeholder="Full Name"
+                                  placeholder="Ім'я користувача"
                               />
                           </Col>
                       </FormGroup>
 
                       <FormGroup controlId="formHorizontalPassword">
                           <Col sm={4} id={'password-caption'}>
-                              Email
+                              Емейл
                           </Col>
                           <Col sm={8}>
                               <FormControl
                                   value={email}
                                   onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
                                   type="text"
-                                  placeholder="Email Address"
+                                  placeholder="Емейл адреса"
                               />
                           </Col>
                       </FormGroup>
 
                       <FormGroup controlId="formHorizontalPassword">
                           <Col sm={4} id={'password-caption'}>
-                              Password
+                              Пароль
                           </Col>
                           <Col sm={8}>
                               <FormControl
                                   value={passwordOne}
                                   onChange={event => this.setState(updateByPropertyName('passwordOne', event.target.value))}
                                   type="password"
-                                  placeholder="Password"
+                                  placeholder="Пароль"
                               />
                           </Col>
                       </FormGroup>
@@ -142,13 +142,13 @@ class SignUpForm extends Component {
                                   value={passwordTwo}
                                   onChange={event => this.setState(updateByPropertyName('passwordTwo', event.target.value))}
                                   type="password"
-                                  placeholder="Confirm Password"
+                                  placeholder="Підтвердження пароля"
                               />
                           </Col>
                       </FormGroup>
 
                       <FormGroup>
-                          <Button disabled={isInvalid} type="submit" bsStyle="primary" id={'signup-button'}>Sign up</Button>
+                          <Button disabled={isInvalid} type="submit" bsStyle="primary" id={'signup-button'}>Зареєструватися</Button>
                       </FormGroup>
 
                       { error && <p id={'error-message'}>{error.message}</p> }
@@ -162,9 +162,8 @@ class SignUpForm extends Component {
 
 const SignUpLink = () =>
   <p>
-    Don't have an account?
-    {' '}
-    <Link to={routes.SIGN_UP}>Sign Up</Link>
+    Не маєте акаунта?
+    <Link to={routes.SIGN_UP}>Реєстрація</Link>
   </p>;
 
 export default withRouter(SignUpPage);

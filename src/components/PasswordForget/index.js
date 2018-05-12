@@ -59,21 +59,21 @@ class PasswordForgetForm extends Component {
         <div id={'panel-container'}>
             <Panel id={'form-panel'} bsStyle="primary">
                 <Panel.Heading>
-                    <Panel.Title componentClass="h3">Forgot password</Panel.Title>
+                    <Panel.Title componentClass="h3">Відновлення пороля</Panel.Title>
                 </Panel.Heading>
                 <Row id={'panel-content-container'}>
                     <Form onSubmit={this.onSubmit} horizontal>
                         <FormGroup controlId="formHorizontalPassword">
                             <div id={'row-container'}>
                                 <Col sm={4} id={'password-caption'}>
-                                    Email
+                                    Емейл
                                 </Col>
                                 <Col sm={8}>
                                     <FormControl
                                         value={this.state.email}
                                         onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
                                         type="text"
-                                        placeholder="Email Address"
+                                        placeholder="Емейл адреса"
                                     />
                                 </Col>
                             </div>
@@ -84,7 +84,7 @@ class PasswordForgetForm extends Component {
                         </FormGroup>
                         { error && <p id={'error-message'}>{error.message}</p> }
 
-                        <p>Ready? <Link to={routes.SIGN_IN}>Sign In</Link></p>
+                        <p>Готово? <Link to={routes.SIGN_IN}>Увійти</Link></p>
                     </Form>
                 </Row>
             </Panel>
@@ -95,7 +95,7 @@ class PasswordForgetForm extends Component {
 
 const PasswordForgetLink = () =>
   <p>
-    <Link to={routes.PASSWORD_FORGET}>Forgot Password?</Link>
+    <Link to={routes.PASSWORD_FORGET}>Забули пароль?</Link>
   </p>;
 
 export default PasswordForgetPage;

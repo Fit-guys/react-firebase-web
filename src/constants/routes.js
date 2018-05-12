@@ -4,6 +4,4 @@ export const SIGN_IN = '/signin';
 export const PASSWORD_FORGET = '/pw-forget';
 export const HOME = '/home';
 export const ACCOUNT = '/account';
-export const PROJECT = '/project';
-export const TECHNOLOGIES = '/technologies';
-export const ABOUT = '/about';
+export const SHARE = '/share';

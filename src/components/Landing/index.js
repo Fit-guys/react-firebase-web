@@ -3,6 +3,8 @@ import Image from "react-bootstrap/es/Image";
 import headerImage from '../../images/login-back.png';
 import unicornLogo from '../../images/unicorn.png';
 import './style.css';
+import Technologies from "../Technologies";
+import About from "../About";
 
 const LandingPage = () =>
     <div id={"landing"}>
@@ -18,6 +20,8 @@ const LandingPage = () =>
                     FIT UNIVERSITY TEAM
                 </span>
             </div>
+            <Technologies />
+            <About />
         </div>
     </div>;
 

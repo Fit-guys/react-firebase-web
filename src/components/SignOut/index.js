@@ -6,7 +6,7 @@ const SignOutButton = () =>
       <div
           onClick={auth.doSignOut}
       >
-          Sign Out
+          Вихід
       </div>;
 
 export default SignOutButton;

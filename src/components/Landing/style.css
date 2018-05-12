@@ -2,6 +2,10 @@
     margin-bottom: 2em;
 }
 
+#row .person-wrapper {
+    margin: auto 3.5%;
+}
+
 #row-people .person-wrapper{
     margin-bottom: 2em;
     -webkit-background-size: 100% 100%;
@@ -23,7 +27,7 @@
 
 .header-image{
     width: 100vw;
-    height: 95vh;
+    height: 86vh;
 }
 
 #logo{
@@ -87,13 +91,13 @@
 #jumb-project{
     background-color: #4b4b4b;
     height: 90vh;
-    color: #1b0002;
+    color: #000000;
 }
 
 #jumb-contact{
     background-color: #dedede;
     height: 15vh;
-    color: #1b0002;
+    color: #000000;
     margin-bottom: 0;
 }
 
@@ -136,7 +140,7 @@ h3{
 
 #row{
     width: 80%;
-    height: 70vh;
+    height: 60vh;
     margin: auto;
 }
 
@@ -163,11 +167,19 @@ h3{
     color: aliceblue;
 }
 
+#row-people .person-wrapper:hover{
+    margin: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.24), 0 8px 30px 0 rgba(0, 0, 0, 0.24);
+    background-color: #404040;
+    color: aliceblue;
+}
+
+
 #technologies-header{
     text-align: center;
     text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-    padding: 10px;
-    color: #401415;
+    padding: 25px 15px 15px;
+    color: #000000;
     font-family: "Book Antiqua", "Tw Cen MT Condensed Extra Bold", sans-serif;
 }
 
@@ -190,9 +202,6 @@ h3{
 
 #andrey{
     background-image: url('../../images/profilePics/andrey.jpg');
-}
-
-#andrey .takeSpace{
 }
 
 #alexandr{
@@ -226,43 +235,6 @@ h3{
     margin-top: 20px;
 }
 
-#down-arrow-left {
-    position: absolute;
-    top: 80vh;
-    left: 5%;
-    width: 125px;
-    height: 125px;
-    animation: arrow 1.4s linear infinite;
-}
-
-#down-arrow-right {
-    animation: arrow 1.4s linear infinite;
-    position: absolute;
-    top: 80vh;
-    right: 5%;
-    width: 125px;
-    height: 125px;
-}
-
-#down-arrow-right{
-    animation: arrow 1.4s linear infinite;
-    position: absolute;
-    top: 80vh;
-    right: 5%;
-    width: 125px;
-    height: 125px;
-}
-
-@keyframes arrow {
-    0% {
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.1);
-        top: 84vh;
-        visibility: hidden;
-    }
-    100% {
-        transform: scale(1);
-    }
+#about-us-container{
+    background-color: #c7c7c7;
 }

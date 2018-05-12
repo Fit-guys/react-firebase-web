@@ -106,7 +106,7 @@ class SignInForm extends Component {
       <div id={'panel-container'}>
           <Panel id={'form-panel'} bsStyle="primary">
               <Panel.Heading>
-                  <Panel.Title componentClass="h3">Sign In</Panel.Title>
+                  <Panel.Title componentClass="h3">Вхід</Panel.Title>
               </Panel.Heading>
               <Row id={'panel-content-container'}>
                   <Form onSubmit={this.onSubmit} horizontal>
@@ -123,34 +123,34 @@ class SignInForm extends Component {
                       </div>
                       <FormGroup controlId="formHorizontalEmail">
                           <Col sm={2} id={'email-caption'}>
-                              Email
+                              Емейл
                           </Col>
                           <Col sm={10}>
                               <FormControl
                                   value={email}
                                   onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
                                   type="text"
-                                  placeholder="Email Address"
+                                  placeholder="Емейл"
                               />
                           </Col>
                       </FormGroup>
 
                       <FormGroup controlId="formHorizontalPassword">
                           <Col sm={2} id={'password-caption'}>
-                              Password
+                              Пароль
                           </Col>
                           <Col sm={10}>
                               <FormControl
                                   value={password}
                                   onChange={event => this.setState(updateByPropertyName('password', event.target.value))}
                                   type="password"
-                                  placeholder="Password"
+                                  placeholder="Пароль"
                               />
                           </Col>
                       </FormGroup>
 
                       <FormGroup>
-                              <Button disabled={isInvalid} type="submit" bsStyle="primary">Sign in</Button>
+                              <Button disabled={isInvalid} type="submit" bsStyle="primary">Увійти</Button>
                       </FormGroup>
 
                       { error && <p id={'error-message'}>{error.message}</p> }

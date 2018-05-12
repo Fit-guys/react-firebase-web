@@ -11,8 +11,8 @@ class About extends Component {
 
     render() {
         return (
-            <div>
-                <h1 id={"technologies-header"}><b>WHO WE ARE?</b></h1>
+            <div id={'about-us-container'}>
+                <h1 id={"technologies-header"}><b>ХТО МИ?</b></h1>
                 <Row className="show-grid text-center" id="row-people">
                     <Col xs={12} sm={3} className="person-wrapper" id={'maks'} >
                         <div className="takeSpace">
@@ -109,10 +109,10 @@ class About extends Component {
                 </Row>
                 <footer id={'t-footer'}>
                     <h2>
-                        Any question?
+                        Маєте питання?
                     </h2>
                     <h3>
-                        Feel free to write us with any issue <span>help.cyber@gmail.com</span>
+                        Пишіть нам <span>help.cyber@gmail.com</span>
                     </h3>
                 </footer>
             </div>
